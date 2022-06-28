@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="XDoclet Generator" default="_xdoclet_generation_">
+<property file="xdoclet-build.properties"/>
+<property name="eclipse.home" value="/home/hernux/usr/apps/eclipse-3.1.2"/>
+<property name="xdoclet.basedir" value="${eclipse.home}/plugins/org.jboss.ide.eclipse.xdoclet.core_1.5.0"/>
+<property name="jboss.net.version" value="4.0"/>
+<path id="project.classpath"><pathelement location="bin"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/axis-1.2/log4j-1.2.8.jar"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/axis-1.2/commons-logging.jar"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/axis-1.2/axis.jar"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/axis-1.2/wsdl4j.jar"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/axis-1.2/commons-discovery.jar"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/wsi-1.0/jaxrpc-api.jar"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/wsi-1.0/saaj-api.jar"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/wsi-1.0/jaxr-api.jar"/>
+<pathelement location="${eclipse.home}/plugins/org.jboss.ide.eclipse.jdt.ws.core_1.5.0/lib/wsi-1.0/xml-api.jar"/>
+<pathelement location="../services/build"/>
+<pathelement location="../libraries/build"/>
+<pathelement location="../services/lib/activation.jar"/>
+<pathelement location="../services/lib/ant-launcher-1.6.5.jar"/>
+<pathelement location="../services/lib/antlr-2.7.6rc1.jar"/>
+<pathelement location="../services/lib/asm.jar"/>
+<pathelement location="../services/lib/asm-attrs.jar"/>
+<pathelement location="../services/lib/cglib-2.1.3.jar"/>
+<pathelement location="../services/lib/commons-collections-2.1.1.jar"/>
+<pathelement location="../services/lib/commons-logging-1.0.4.jar"/>
+<pathelement location="../services/lib/dom.jar"/>
+<pathelement location="../services/lib/dom4j-1.6.1.jar"/>
+<pathelement location="../services/lib/hibernate3.jar"/>
+<pathelement location="../services/lib/jaxp-api.jar"/>
+<pathelement location="../services/lib/jax-qname.jar"/>
+<pathelement location="../services/lib/jaxrpc-api.jar"/>
+<pathelement location="../services/lib/jaxrpc-impl.jar"/>
+<pathelement location="../services/lib/jaxrpc-spi.jar"/>
+<pathelement location="../services/lib/jta.jar"/>
+<pathelement location="../services/lib/libCRM.jar"/>
+<pathelement location="../services/lib/log4j-1.2.11.jar"/>
+<pathelement location="../services/lib/mail.jar"/>
+<pathelement location="../services/lib/mysql-connector-java-3.1.12-bin.jar"/>
+<pathelement location="../services/lib/namespace.jar"/>
+<pathelement location="../services/lib/relaxngDatatype.jar"/>
+<pathelement location="../services/lib/saaj-api.jar"/>
+<pathelement location="../services/lib/saaj-impl.jar"/>
+<pathelement location="../services/lib/sax.jar"/>
+<pathelement location="../services/lib/xalan.jar"/>
+<pathelement location="../services/lib/xercesImpl.jar"/>
+<pathelement location="../services/lib/xml-apis.jar"/>
+<pathelement location="../services/lib/xsdlib.jar"/>
+<pathelement location="/home/hernux/usr/sun-appserver/lib/jaxrpc-impl.jar"/>
+<pathelement location="../gui/lib/activation.jar"/>
+</path>
+<path id="xdoclet.classpath">
+<path refid="project.classpath"/>
+<fileset dir="${xdoclet.basedir}">
+<include name="*.jar"/>
+<exclude name="xdoclet-module-jboss-net-*.jar"/>
+</fileset>
+<fileset dir="${xdoclet.basedir}">
+<include name="xdoclet-module-jboss-net-${jboss.net.version}*.jar"/>
+</fileset>
+</path>
+<target name="_xdoclet_generation_" depends="N65540,N65736"/>
+<target name="N65540" description="Axis"/>
+<target name="N65736" description="wseedoclet">
+<taskdef name="wseedoclet" classname="xdoclet.modules.wsee.WseeDocletTask" classpathref="xdoclet.classpath"/><wseedoclet wsdlFile="META-INF/wsdl/HelloService.wsdl"  jaxrpcMappingFile="META-INF/jaxrpc-mapping.xml"  wseeSpec="1.1"  destdir="src"  mergeDir="merge"  excludedtags="@version,@author,@todo"  addedtags="@xdoclet-generated, @copyright The XDoclet Team,@author XDoclet"  force="true"  verbose="true" >
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<jaxrpc-mapping></jaxrpc-mapping>
+	<wsdl></wsdl>
+	
+	<packageNamespaceMapping packages="com.myapp"  namespace="http://myapp.com/Hello" >
+		
+		
+	</packageNamespaceMapping>
+	
+	<fileset dir="src"  defaultexcludes="yes" >
+		
+		
+		<include name="**/*.java" >
+			
+		</include>
+	</fileset>
+
+	<deploymentdescriptor destdir="src/META-INF"  name="HelloService" >
+		
+		
+	</deploymentdescriptor>
+</wseedoclet></target>
+</project>

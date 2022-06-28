@@ -1,0 +1,2 @@
+crm.client.report.PptoSubGerenciaReportDSBuilder
+crm.client.report.SubcontratadosGerenciaReport

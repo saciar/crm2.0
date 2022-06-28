@@ -1,0 +1,2 @@
+crm.client.report.PorcentajeComercialesReport
+crm.client.report.PorcComercialesReportDSBuilder

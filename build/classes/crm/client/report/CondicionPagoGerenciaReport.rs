@@ -1,0 +1,2 @@
+crm.client.report.CondicionPagoGerenciaReport
+crm.client.report.CondPagoGerenciaReportDSBuilder

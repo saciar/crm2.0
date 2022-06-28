@@ -1,0 +1,2 @@
+crm.client.report.ReferenciaGerenciaReportDSBuilder
+crm.client.report.ReferenciaGerenciaReport

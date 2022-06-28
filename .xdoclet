@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations>
+<configuration name="Axis" used="false">
+<task className="xdoclet.DocletTask" name="xdoclet" used="true">
+<attribute name="excludedTags" used="false" value=""/>
+<attribute name="destDir" used="true" value="testaxis"/>
+<attribute name="mergeDir" used="false" value=""/>
+<attribute name="force" used="false" value=""/>
+<attribute name="verbose" used="true" value="1"/>
+<attribute name="addedTags" used="false" value=""/>
+<element name="template" used="true">
+<attribute name="acceptInterfaces" used="false" value=""/>
+<attribute name="acceptAbstractClasses" used="false" value=""/>
+<attribute name="packageSubstitutions" used="false" value=""/>
+<attribute name="packageSubstitutionInheritanceSupported" used="false" value=""/>
+<attribute name="subTaskClassName" used="false" value=""/>
+<attribute name="prefixWithPackageStructure" used="false" value=""/>
+<attribute name="destinationFile" used="true" value="deploy.wsdd"/>
+<attribute name="templateURL" used="false" value=""/>
+<attribute name="templateFile" used="true" value="axis-wsdd.xdt.xml"/>
+<attribute name="Extent" used="false" value=""/>
+<attribute name="havingClassTag" used="false" value=""/>
+<attribute name="ofType" used="false" value=""/>
+<attribute name="subTaskName" used="false" value=""/>
+<attribute name="destDir" used="false" value=""/>
+<attribute name="mergeDir" used="false" value=""/>
+<attribute name="currentMethodTag" used="false" value=""/>
+<attribute name="currentClassTag" used="false" value=""/>
+<attribute name="currentFieldTag" used="false" value=""/>
+<attribute name="currentPackage" used="false" value=""/>
+<attribute name="currentMethod" used="false" value=""/>
+<attribute name="currentConstructor" used="false" value=""/>
+<attribute name="currentField" used="false" value=""/>
+<attribute name="currentClass" used="false" value=""/>
+<element name="ConfigParam" used="true">
+<attribute name="name" used="true" value="Xmlencoding"/>
+<attribute name="value" used="true" value="utf-8"/>
+</element>
+</element>
+<element name="fileset" used="true">
+<attribute name="dir" used="true" value="src"/>
+<element name="include" used="true">
+<attribute name="name" used="true" value="**/*.java"/>
+</element>
+</element>
+</task>
+</configuration>
+<configuration name="wseedoclet" used="false">
+<task className="xdoclet.modules.wsee.WseeDocletTask" name="wseedoclet" used="true">
+<attribute name="wsdlFile" used="true" value="META-INF/wsdl/HelloService.wsdl"/>
+<attribute name="jaxrpcMappingFile" used="true" value="META-INF/jaxrpc-mapping.xml"/>
+<attribute name="wseeSpec" used="true" value="1.1"/>
+<attribute name="destdir" used="true" value="src"/>
+<attribute name="mergeDir" used="true" value="merge"/>
+<attribute name="excludedtags" used="true" value="@version,@author,@todo"/>
+<attribute name="addedtags" used="true" value="@xdoclet-generated, @copyright The XDoclet Team,@author XDoclet"/>
+<attribute name="force" used="true" value="true"/>
+<attribute name="verbose" used="true" value="true"/>
+<element name="jaxrpc-mapping" used="true"/>
+<element name="wsdl" used="true"/>
+<element name="packageNamespaceMapping" used="true">
+<attribute name="packages" used="true" value="com.myapp"/>
+<attribute name="namespace" used="true" value="http://myapp.com/Hello"/>
+</element>
+<element name="fileset" used="true">
+<attribute name="dir" used="true" value="src"/>
+<attribute name="defaultexcludes" used="true" value="yes"/>
+<element name="include" used="true">
+<attribute name="name" used="true" value="**/*.java"/>
+</element>
+</element>
+<element name="deploymentdescriptor" used="true">
+<attribute name="destdir" used="true" value="src/META-INF"/>
+<attribute name="name" used="true" value="HelloService"/>
+</element>
+</task>
+</configuration>
+</configurations>

@@ -1,0 +1,2 @@
+crm.client.report.PorcentajeGerenciaReport
+crm.client.report.PptGerenciaReportDSBuilder

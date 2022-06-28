@@ -1,0 +1,2 @@
+crm.client.report.PresupuestosGerenciaReport
+crm.client.report.PptoGerenciaReportDSBuilder
